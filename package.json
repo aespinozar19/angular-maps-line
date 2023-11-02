@@ -6,7 +6,11 @@
     "envs": "node ./scripts/set-envs.js",
     "start": "npm run envs && ng serve",
     "build": "npm run envs && ng build",
+    "build:href": "ng build --base-href ./",
     "watch": "ng build --watch --configuration development",
+    "delete:docs": "del docs",
+    "copy:dist": "copyfiles dist/mapas-rutas/* ./docs -f",
+    "build:github": "npm run delete:docs && node ./scripts/set-envs.js && npm run build:href && npm run copy:dist",
     "test": "ng test"
   },
   "private": true,
