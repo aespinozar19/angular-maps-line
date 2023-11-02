@@ -1,9 +1,8 @@
-div {
+.map-container {
   width: 100vw;
   height: 100vh;
-  background-color: red;
-}
-
-p {
-  color: blue;
+  /* background-color: red; */
+  position: fixed;
+  top: 0px;
+  right: 0px;
 }
